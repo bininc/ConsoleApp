@@ -35,8 +35,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "B_ConsoleApp50", "Benchmark
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Result", "Result", "{37FF0C1C-83BE-4C74-A2D1-EDDCDBC3E156}"
 	ProjectSection(SolutionItems) = preProject
-		Report.html = Report.html
+		Benchmark\Result\Report.html = Benchmark\Result\Report.html
 		Benchmark\Result\Result-20220426.txt = Benchmark\Result\Result-20220426.txt
+		Benchmark\Result\result.json = Benchmark\Result\result.json
 	EndProjectSection
 EndProject
 Global
