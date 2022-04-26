@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="result.json"></script>
+    <script src="echarts.min.js"></script>
+</head>
+<body>
+    <div id="dataSelect" style="width:auto;height:30px; padding-top:10px;">
+        &nbsp;
+        <label>数据源：</label>
+        <select id="selectDataSource" onchange="dataSourceChange();">
+        </select>
+        &nbsp;&nbsp;&nbsp;
+        <label>测试方法：</label>
+        <select id="selectMethod" onchange="methodChange();">
+        </select>
+    </div>
+    <div id="info" style="width:auto;height:20px;margin-bottom:10px;background-color:whitesmoke; color:grey;">
+        &nbsp;
+        <label>OS:</label>
+        <label id="lblOs" style="font-style:italic;"></label>
+        &nbsp;&nbsp;&nbsp;
+        <label>Processor:</label>
+        <label id="lblProcessor" style="font-style:italic;"></label>
+    </div>
+    <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+    <div id="main" style="width: auto;height:500px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: '基准测试结果'
+            },
+            tooltip: { "单位":"ms"},
+            legend: {
+                data: ['示例']
+            },
+            xAxis: {
+                axisTick: {
+                    interval: '0'
+                },
+                splitArea: {
+                    interval: '0',
+                    show: true,
+                },
+                data: ['1', '2', '3', '4', '5', '6']
+            },
+            yAxis: {},
+            series: [
+                {
+                    name: '示例',
+                    type: 'bar',
+                    data: [5, 20, 36, 10, 10, 20]
+                }
+            ]
+        };
+
+        var selDataSource = document.getElementById('selectDataSource');
+        var selMethod = document.getElementById('selectMethod');
+        function methodChange() {
+            selMethod = selData.data.find(function (item) {
+                return item.method === selMethod.value;
+            });
+            if (selMethod) {
+                option.yAxis.axisLabel = {
+                    formatter : '{value} ' + selMethod.unit,
+                    align: 'center'
+                };
+                option.xAxis.data = selMethod.reulst.map(function (item) {
+                    return item.hostCLR;
+                });
+                option.legend.data = ['Mean', 'Error', 'StdDev', 'Ratio'];
+                option.series[0] = {
+                    name: 'Mean',
+                    type: 'bar',
+                    data: selMethod.reulst.map(function (item) { return item.median; })
+                };
+                option.series[1] = {
+                    name: 'Error',
+                    type: 'bar',
+                    data: selMethod.reulst.map(function (item) { return item.error; })
+                }; option.series[2] = {
+                    name: 'StdDev',
+                    type: 'bar',
+                    data: selMethod.reulst.map(function (item) { return item.stdDev; })
+                }; option.series[3] = {
+                    name: 'Ratio',
+                    type: 'bar',
+                    data: selMethod.reulst.map(function (item) { return item.ratio; })
+                };
+                // 使用刚指定的配置项和数据显示图表。
+                myChart.setOption(option);
+            }
+        }
+
+        function dataSourceChange() {
+            selData = dataSource.find(function (item) {
+                return item.version === selDataSource.value;
+            });
+            if (selData) {
+                document.getElementById('lblOs').innerText = selData.os;
+                document.getElementById('lblProcessor').innerText = selData.processor;
+                for (var i = 0; i < selData.data.length; i++) {
+                    var d = selData.data[i];
+                    selMethod.add(new Option(d.method, d.method));
+                }
+                if (selData.data.length > 0) {
+                    selMethod.selectedIndex = 0;
+                    methodChange();
+                }
+            }
+        }
+        for (var i = 0; i < dataSource.length; i++) {
+            var data = dataSource[i];
+            selDataSource.add(new Option(data.version, data.version));
+        }
+        if (dataSource.length > 0) {
+            selDataSource.selectedIndex = 0;
+            dataSourceChange();
+        }
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+
+        window.onresize = function () {
+            myChart.resize();
+        };
+
+
+    </script>
+</body>
+</html>

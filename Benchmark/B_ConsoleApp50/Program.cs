@@ -1,5 +1,6 @@
 ﻿using ClassLibrary4_0;
 using System;
+using System.Diagnostics;
 
 namespace B_ConsoleApp50
 {
@@ -7,7 +8,13 @@ namespace B_ConsoleApp50
     {
         static void Main(string[] args)
         {
-            BenchmarkDotNet.Running.BenchmarkRunner.Run<SIMDTest>();
+            SIMDTest test = new SIMDTest();
+            BenchmarkDotNet.Running.BenchmarkRunner.Run(test.GetType());
+            Stopwatch sw = Stopwatch.StartNew();
+            bool suc = test.SimpleCompare();
+            sw.Stop();
+            Console.WriteLine($"result:{suc} time:{sw.ElapsedTicks}");
+
             Console.ReadLine();
         }
     }

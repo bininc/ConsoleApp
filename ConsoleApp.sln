@@ -29,9 +29,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "B_ConsoleAppCore31", "Bench
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "B_ConsoleApp60", "Benchmark\B_ConsoleApp60\B_ConsoleApp60.csproj", "{5EFD963F-5B6F-4107-976C-2F24BA7D4344}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "B_ConsoleAppCore21", "Benchmark\B_ConsoleAppCore21\B_ConsoleAppCore21.csproj", "{D83A1965-6275-430F-A94D-FAD5B8895AAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "B_ConsoleAppCore21", "Benchmark\B_ConsoleAppCore21\B_ConsoleAppCore21.csproj", "{D83A1965-6275-430F-A94D-FAD5B8895AAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "B_ConsoleApp50", "Benchmark\B_ConsoleApp50\B_ConsoleApp50.csproj", "{52566B7C-AFB1-4449-B041-2175DB627C92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "B_ConsoleApp50", "Benchmark\B_ConsoleApp50\B_ConsoleApp50.csproj", "{52566B7C-AFB1-4449-B041-2175DB627C92}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Result", "Result", "{37FF0C1C-83BE-4C74-A2D1-EDDCDBC3E156}"
+	ProjectSection(SolutionItems) = preProject
+		Report.html = Report.html
+		Benchmark\Result\Result-20220426.txt = Benchmark\Result\Result-20220426.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -162,6 +168,7 @@ Global
 		{5EFD963F-5B6F-4107-976C-2F24BA7D4344} = {561D82F9-7DEF-4CF1-9D7E-12193D206C25}
 		{D83A1965-6275-430F-A94D-FAD5B8895AAC} = {561D82F9-7DEF-4CF1-9D7E-12193D206C25}
 		{52566B7C-AFB1-4449-B041-2175DB627C92} = {561D82F9-7DEF-4CF1-9D7E-12193D206C25}
+		{37FF0C1C-83BE-4C74-A2D1-EDDCDBC3E156} = {561D82F9-7DEF-4CF1-9D7E-12193D206C25}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7210D3DC-8F24-4BC6-91A5-755CD6E5BE8B}

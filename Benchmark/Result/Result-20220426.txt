@@ -1,0 +1,123 @@
+
+BenchmarkDotNet=v0.9.7.0
+OS=Microsoft Windows NT 6.2.9200.0
+Processor=Intel(R) Core(TM) i3-8350K CPU 4.00GHz, ProcessorCount=4
+Frequency=10000000 ticks, Resolution=100.0000 ns, Timer=UNKNOWN
+HostCLR=MS.NET 4.0.30319.42000, Arch=64-bit RELEASE [RyuJIT]
+JitModules=clrjit-v4.8.9028.0
+
+Type=SIMDTest  Mode=Throughput
+
+        Method |    Median |    StdDev | Scaled |
+-------------- |---------- |---------- |------- |
+ SimpleCompare | 5.2052 ms | 0.0200 ms |   1.00 |
+
+
+===================================================================
+
+BenchmarkDotNet=v0.10.3.0, OS=Microsoft Windows NT 6.2.9200.0
+Processor=Intel(R) Core(TM) i3-8350K CPU 4.00GHz, ProcessorCount=4
+Frequency=10000000 Hz, Resolution=100.0000 ns, Timer=UNKNOWN
+  [Host]     : Clr 4.0.30319.42000, 32bit LegacyJIT-v4.8.9028.0
+  DefaultJob : Clr 4.0.30319.42000, 32bit LegacyJIT-v4.8.9028.0
+
+
+        Method |      Mean |    StdDev | Scaled | Scaled-StdDev |
+-------------- |---------- |---------- |------- |-------------- |
+ SimpleCompare | 4.1835 ms | 0.0076 ms |   1.00 |          0.00 |
+
+
+===================================================================
+
+BenchmarkDotNet=v0.10.14, OS=Windows 10.0.22598
+Intel Core i3-8350K CPU 4.00GHz (Coffee Lake), 1 CPU, 4 logical and 4 physical cores
+  [Host]     : .NET Framework 4.6.2 (CLR 4.0.30319.42000), 32bit LegacyJIT-v4.8.9028.0
+  DefaultJob : .NET Framework 4.6.2 (CLR 4.0.30319.42000), 32bit LegacyJIT-v4.8.9028.0
+
+
+        Method |     Mean |     Error |    StdDev | Scaled |
+-------------- |---------:|----------:|----------:|-------:|
+ SimpleCompare | 2.209 ms | 0.0267 ms | 0.0237 ms |   1.00 |
+
+
+===================================================================
+
+BenchmarkDotNet=v0.11.3, OS=Windows 10.0.22598
+Intel Core i3-8350K CPU 4.00GHz (Coffee Lake), 1 CPU, 4 logical and 4 physical cores
+  [Host]     : .NET Framework 4.7.2 (CLR 4.0.30319.42000), 32bit LegacyJIT-v4.8.9028.0
+  DefaultJob : .NET Framework 4.7.2 (CLR 4.0.30319.42000), 32bit LegacyJIT-v4.8.9028.0
+
+
+        Method |     Mean |     Error |    StdDev | Ratio |
+-------------- |---------:|----------:|----------:|------:|
+ SimpleCompare | 3.599 ms | 0.0110 ms | 0.0103 ms |  1.00 |
+
+
+===================================================================
+
+BenchmarkDotNet=v0.13.1, OS=Windows 10.0.22598
+Intel Core i3-8350K CPU 4.00GHz (Coffee Lake), 1 CPU, 4 logical and 4 physical cores
+  [Host]     : .NET Framework 4.8 (4.8.9028.0), X86 LegacyJIT
+  DefaultJob : .NET Framework 4.8 (4.8.9028.0), X86 LegacyJIT
+
+
+|        Method |     Mean |     Error |    StdDev | Ratio |
+|-------------- |---------:|----------:|----------:|------:|
+| SimpleCompare | 3.477 ms | 0.0615 ms | 0.0575 ms |  1.00 |
+
+
+===================================================================
+
+BenchmarkDotNet=v0.11.3, OS=Windows 10.0.22598
+Intel Core i3-8350K CPU 4.00GHz (Coffee Lake), 1 CPU, 4 logical and 4 physical cores
+.NET Core SDK=6.0.202
+  [Host]     : .NET Core 2.1.30 (CoreCLR 4.6.30411.01, CoreFX 4.6.30411.02), 64bit RyuJIT
+  DefaultJob : .NET Core 2.1.30 (CoreCLR 4.6.30411.01, CoreFX 4.6.30411.02), 64bit RyuJIT
+
+
+        Method |     Mean |     Error |    StdDev | Ratio |
+-------------- |---------:|----------:|----------:|------:|
+ SimpleCompare | 4.213 ms | 0.0351 ms | 0.0311 ms |  1.00 |
+
+
+===================================================================
+
+BenchmarkDotNet=v0.13.1, OS=Windows 10.0.22598
+Intel Core i3-8350K CPU 4.00GHz (Coffee Lake), 1 CPU, 4 logical and 4 physical cores
+.NET SDK=6.0.202
+  [Host]     : .NET Core 3.1.24 (CoreCLR 4.700.22.16002, CoreFX 4.700.22.17909), X64 RyuJIT
+  DefaultJob : .NET Core 3.1.24 (CoreCLR 4.700.22.16002, CoreFX 4.700.22.17909), X64 RyuJIT
+
+
+|        Method |     Mean |     Error |    StdDev | Ratio |
+|-------------- |---------:|----------:|----------:|------:|
+| SimpleCompare | 4.202 ms | 0.0149 ms | 0.0132 ms |  1.00 |
+
+
+===================================================================
+
+BenchmarkDotNet=v0.13.1, OS=Windows 10.0.22598
+Intel Core i3-8350K CPU 4.00GHz (Coffee Lake), 1 CPU, 4 logical and 4 physical cores
+.NET SDK=6.0.202
+  [Host]     : .NET 5.0.16 (5.0.1622.16705), X64 RyuJIT
+  DefaultJob : .NET 5.0.16 (5.0.1622.16705), X64 RyuJIT
+
+
+|        Method |     Mean |     Error |    StdDev | Ratio |
+|-------------- |---------:|----------:|----------:|------:|
+| SimpleCompare | 4.166 ms | 0.0070 ms | 0.0066 ms |  1.00 |
+
+
+===================================================================
+
+BenchmarkDotNet=v0.13.1, OS=Windows 10.0.22598
+Intel Core i3-8350K CPU 4.00GHz (Coffee Lake), 1 CPU, 4 logical and 4 physical cores
+.NET SDK=6.0.202
+  [Host]     : .NET 6.0.4 (6.0.422.16404), X64 RyuJIT
+  DefaultJob : .NET 6.0.4 (6.0.422.16404), X64 RyuJIT
+
+
+|        Method |     Mean |     Error |    StdDev | Ratio |
+|-------------- |---------:|----------:|----------:|------:|
+| SimpleCompare | 3.153 ms | 0.0145 ms | 0.0129 ms |  1.00 |
+
