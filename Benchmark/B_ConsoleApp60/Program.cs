@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using ClassLibrary4_0;
+using B_ClassLibrary;
 using System.Diagnostics;
 
 SIMDTest test = new SIMDTest();

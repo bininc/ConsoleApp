@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ClassLibrary4_0;
+using B_ClassLibrary;
 
 namespace ConsoleApp472
 {

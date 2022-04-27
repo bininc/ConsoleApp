@@ -1,5 +1,5 @@
 ﻿using System;
-using ClassLibrary4_0;
+using B_ClassLibrary;
 
 namespace B_ConsoleAppCore31
 {

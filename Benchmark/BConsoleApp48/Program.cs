@@ -1,4 +1,4 @@
-﻿using ClassLibrary4_0;
+﻿using B_ClassLibrary;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -15,7 +15,7 @@ namespace BConsoleApp48
             SIMDTest test = new SIMDTest();
             BenchmarkDotNet.Running.BenchmarkRunner.Run(test.GetType());
             Stopwatch sw = Stopwatch.StartNew();
-            bool suc = test.SimpleCompare();
+            bool suc = test.VectorCompare();
             sw.Stop();
             Console.WriteLine($"result:{suc} time:{sw.ElapsedTicks}");
             Console.ReadLine();

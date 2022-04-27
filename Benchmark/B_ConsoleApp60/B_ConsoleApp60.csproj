@@ -5,10 +5,11 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\ClassLibrary4.0\SIMDTest.cs" Link="SIMDTest.cs" />
+    <Compile Include="..\B_ClassLibrary\SIMDTest.cs" Link="SIMDTest.cs" />
   </ItemGroup>
 
   <ItemGroup>

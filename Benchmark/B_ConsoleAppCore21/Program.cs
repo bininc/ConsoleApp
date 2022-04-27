@@ -1,4 +1,4 @@
-﻿using ClassLibrary4_0;
+﻿using B_ClassLibrary;
 using System;
 
 namespace B_ConsoleAppCore21
