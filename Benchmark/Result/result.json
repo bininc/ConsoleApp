@@ -76,12 +76,426 @@ var dataSource = [
     ]
   },
   {
-    "version": "20220427000",
-    "os": "",
-    "processor": "",
+    "version": "20220428000",
+    "os": "Windows 11(10.0.22000)",
+    "processor": "Intel Core i5-1038NG7 CPU 2.00GHz, 1 CPU, 8 logical and 4 physical cores",
     "data": [
       {
         "method": "SimpleCompare",
+        "unit": "us",
+        "reulst": [
+          {
+            "hostCLR": "4.0",
+            "median": 4120.7438,
+            "error": 0,
+            "stdDev": 71.4151,
+            "ratio": 1.00
+          },
+          {
+            "hostCLR": "4.5",
+            "median": 4138.9312,
+            "error": 0,
+            "stdDev": 75.5125,
+            "ratio": 1.00
+          },
+          {
+            "hostCLR": "4.6.2",
+            "median": 4160.6,
+            "error": 79.702,
+            "stdDev": 81.848,
+            "ratio": 1.00
+          },
+          {
+            "hostCLR": "4.7.2",
+            "median": 4360.6,
+            "error": 86.473,
+            "stdDev": 76.656,
+            "ratio": 1.00
+          },
+          {
+            "hostCLR": "4.8",
+            "median": 4185.0,
+            "error": 81.57,
+            "stdDev": 106.06,
+            "ratio": 1.00
+          },
+          {
+            "hostCLR": "Core 2.1",
+            "median": 4110.3,
+            "error": 80.621,
+            "stdDev": 123.116,
+            "ratio": 1.00
+          },
+          {
+            "hostCLR": "Core 3.1",
+            "median": 3983.8,
+            "error": 78.33,
+            "stdDev": 101.85,
+            "ratio": 1.00
+          },
+          {
+            "hostCLR": "5.0",
+            "median": 4127.1,
+            "error": 81.88,
+            "stdDev": 147.65,
+            "ratio": 1.00
+          },
+          {
+            "hostCLR": "6.0",
+            "median": 2580.7,
+            "error": 35.70,
+            "stdDev": 33.39,
+            "ratio": 1.00
+          }
+        ]
+      },
+      {
+        "method": "SimpleCompare_32Bit",
+        "unit": "us",
+        "reulst": [
+          {
+            "hostCLR": "4.0",
+            "median": 605.4471,
+            "error": 0,
+            "stdDev": 21.7099,
+            "ratio": 0.15
+          },
+          {
+            "hostCLR": "4.5",
+            "median": 626.9058,
+            "error": 0,
+            "stdDev": 23.2451,
+            "ratio": 0.15
+          },
+          {
+            "hostCLR": "4.6.2",
+            "median": 621.4,
+            "error": 12.295,
+            "stdDev": 20.878,
+            "ratio": 0.15
+          },
+          {
+            "hostCLR": "4.7.2",
+            "median": 657.8,
+            "error": 13.467,
+            "stdDev": 28.700,
+            "ratio": 0.15
+          },
+          {
+            "hostCLR": "4.8",
+            "median": 626.9,
+            "error": 12.19,
+            "stdDev": 15.84,
+            "ratio": 0.15
+          },
+          {
+            "hostCLR": "Core 2.1",
+            "median": 571.6,
+            "error": 5.605,
+            "stdDev": 4.681,
+            "ratio": 0.14,
+          },
+          {
+            "hostCLR": "Core 3.1",
+            "median": 583.4,
+            "error": 8.14,
+            "stdDev": 7.61,
+            "ratio": 0.15
+          },
+          {
+            "hostCLR": "5.0",
+            "median": 611.3,
+            "error": 12.89,
+            "stdDev": 35.49,
+            "ratio": 0.15
+          },
+          {
+            "hostCLR": "6.0",
+            "median": 580.2,
+            "error": 10.45,
+            "stdDev": 9.77,
+            "ratio": 0.22
+          }
+        ]
+      },
+      {
+        "method": "SimpleCompare_64Bit",
+        "unit": "us",
+        "reulst": [
+          {
+            "hostCLR": "4.0",
+            "median": 398.9707,
+            "error": 0,
+            "stdDev": 10.5980,
+            "ratio": 0.10
+          },
+          {
+            "hostCLR": "4.5",
+            "median": 404.6163,
+            "error": 0,
+            "stdDev": 12.0293,
+            "ratio": 0.10
+          },
+          {
+            "hostCLR": "4.6.2",
+            "median": 408.6,
+            "error": 8.123,
+            "stdDev": 12.405,
+            "ratio": 0.10
+          },
+          {
+            "hostCLR": "4.7.2",
+            "median": 423.3,
+            "error": 8.120,
+            "stdDev": 8.688,
+            "ratio": 0.10
+          },
+          {
+            "hostCLR": "4.8",
+            "median": 401.9,
+            "error": 7.77,
+            "stdDev": 11.39,
+            "ratio": 0.10
+          },
+          {
+            "hostCLR": "Core 2.1",
+            "median": 378.3,
+            "error": 2.909,
+            "stdDev": 2.722,
+            "ratio": 0.09
+          },
+          {
+            "hostCLR": "Core 3.1",
+            "median": 387.9,
+            "error": 3.04,
+            "stdDev": 3.38,
+            "ratio": 0.10
+          },
+          {
+            "hostCLR": "5.0",
+            "median": 429.8,
+            "error": 8.67,
+            "stdDev": 25.56,
+            "ratio": 0.10
+          },
+          {
+            "hostCLR": "6.0",
+            "median": 379.9,
+            "error": 2.73,
+            "stdDev": 2.56,
+            "ratio": 0.15
+          }
+        ]
+      },
+      {
+        "method": "VectorCompare",
+        "unit": "us",
+        "reulst": [
+          {
+            "hostCLR": "4.0",
+            "median": 0,
+            "error": 0,
+            "stdDev": 0,
+            "ratio": 0
+          },
+          {
+            "hostCLR": "4.5",
+            "median": 387.4173,
+            "error": 0,
+            "stdDev": 10.1231,
+            "ratio": 0.09
+          },
+          {
+            "hostCLR": "4.6.2",
+            "median": 392.1,
+            "error": 7.388,
+            "stdDev": 8.508,
+            "ratio": 0.09
+          },
+          {
+            "hostCLR": "4.7.2",
+            "median": 410.8,
+            "error": 8.179,
+            "stdDev": 11.730,
+            "ratio": 0.09
+          },
+          {
+            "hostCLR": "4.8",
+            "median": 378.5,
+            "error": 7.53,
+            "stdDev": 15.21,
+            "ratio": 0.09
+          },
+          {
+            "hostCLR": "Core 2.1",
+            "median": 374.8,
+            "error": 3.279,
+            "stdDev": 3.068,
+            "ratio": 0.09
+          },
+          {
+            "hostCLR": "Core 3.1",
+            "median": 368.8,
+            "error": 5.45,
+            "stdDev": 5.10,
+            "ratio": 0.09
+          },
+          {
+            "hostCLR": "5.0",
+            "median": 437.1,
+            "error": 8.71,
+            "stdDev": 20.87,
+            "ratio": 0.11
+          },
+          {
+            "hostCLR": "6.0",
+            "median": 326.1,
+            "error": 4.58,
+            "stdDev": 4.28,
+            "ratio": 0.13
+          }
+        ]
+      },
+      {
+        "method": "SequenceCompare",
+        "unit": "us",
+        "reulst": [
+          {
+            "hostCLR": "4.0",
+            "median": 0,
+            "error": 0,
+            "stdDev": 0,
+            "ratio": 0
+          },
+          {
+            "hostCLR": "4.5",
+            "median": 43336.3508,
+            "error": 0,
+            "stdDev": 641.5984,
+            "ratio": 10.47
+          },
+          {
+            "hostCLR": "4.6.2",
+            "median": 43742.0,
+            "error": 870.493,
+            "stdDev": 854.940,
+            "ratio": 10.52
+          },
+          {
+            "hostCLR": "4.7.2",
+            "median": 43441.2,
+            "error": 844.899,
+            "stdDev": 1211.729,
+            "ratio": 9.90
+          },
+          {
+            "hostCLR": "4.8",
+            "median": 41836.5,
+            "error": 799.98,
+            "stdDev": 982.45,
+            "ratio": 10.01
+          },
+          {
+            "hostCLR": "Core 2.1",
+            "median": 29782.4,
+            "error": 385.412,
+            "stdDev": 360.515,
+            "ratio": 7.36
+          },
+          {
+            "hostCLR": "Core 3.1",
+            "median": 26327.9,
+            "error": 382.34,
+            "stdDev": 319.27,
+            "ratio": 6.60
+          },
+          {
+            "hostCLR": "5.0",
+            "median": 27456.2,
+            "error": 549.03,
+            "stdDev": 674.26,
+            "ratio": 6.62
+          },
+          {
+            "hostCLR": "6.0",
+            "median": 283.3,
+            "error": 3.09,
+            "stdDev": 2.89,
+            "ratio": 0.11
+          }
+        ]
+      },
+      {
+        "method": "SSE2Compare",
+        "unit": "us",
+        "reulst": [
+          {
+            "hostCLR": "4.0",
+            "median": 4.0909,
+            "error": 0,
+            "stdDev": 0.0528,
+            "ratio": 1.00
+          },
+          {
+            "hostCLR": "4.5",
+            "median": 2.7779,
+            "error": 0,
+            "stdDev": 0.0259,
+            "ratio": 1.00
+          },
+          {
+            "hostCLR": "4.6.2",
+            "median": 2.209,
+            "error": 0.0267,
+            "stdDev": 0.0237,
+            "ratio": 1.00
+          },
+          {
+            "hostCLR": "4.7.2",
+            "median": 3.599,
+            "error": 0.0110,
+            "stdDev": 0.0103,
+            "ratio": 1.00
+          },
+          {
+            "hostCLR": "4.8",
+            "median": 0,
+            "error": 0,
+            "stdDev": 0,
+            "ratio": 0
+          },
+          {
+            "hostCLR": "Core 2.1",
+            "median": 0,
+            "error": 0,
+            "stdDev": 0,
+            "ratio": 0
+          },
+          {
+            "hostCLR": "Core 3.1",
+            "median": 357.7,
+            "error": 5.28,
+            "stdDev": 4.94,
+            "ratio": 0.09
+          },
+          {
+            "hostCLR": "5.0",
+            "median": 381.0,
+            "error": 9.61,
+            "stdDev": 28.34,
+            "ratio": 0.10
+          },
+          {
+            "hostCLR": "6.0",
+            "median": 356.6,
+            "error": 4.07,
+            "stdDev": 3.80,
+            "ratio": 0.14
+          }
+        ]
+      },
+      {
+        "method": "Avx2Compare",
         "unit": "ms",
         "reulst": [
           {
@@ -114,38 +528,38 @@ var dataSource = [
           },
           {
             "hostCLR": "4.8",
-            "median": 3.477,
-            "error": 0.0615,
-            "stdDev": 0.0575,
-            "ratio": 1.00
+            "median": 0,
+            "error": 0,
+            "stdDev": 0,
+            "ratio": 0
           },
           {
             "hostCLR": "Core 2.1",
-            "median": 4.213,
-            "error": 0.0351,
-            "stdDev": 0.0311,
-            "ratio": 1.00
+            "median": 0,
+            "error": 0,
+            "stdDev": 0,
+            "ratio": 0
           },
           {
             "hostCLR": "Core 3.1",
-            "median": 4.202,
-            "error": 0.0149,
-            "stdDev": 0.0132,
-            "ratio": 1.00
+            "median": 289.5,
+            "error": 5.30,
+            "stdDev": 4.70,
+            "ratio": 0.07
           },
           {
             "hostCLR": "5.0",
-            "median": 4.166,
-            "error": 0.0070,
-            "stdDev": 0.0066,
-            "ratio": 1.00
+            "median": 289.2,
+            "error": 4.63,
+            "stdDev": 5.33,
+            "ratio": 0.07
           },
           {
             "hostCLR": "6.0",
-            "median": 3.153,
-            "error": 0.0145,
-            "stdDev": 0.0129,
-            "ratio": 1.00
+            "median": 291.1,
+            "error": 5.66,
+            "stdDev": 6.29,
+            "ratio": 0.11
           }
         ]
       }

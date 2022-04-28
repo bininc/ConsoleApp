@@ -37,7 +37,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Result", "Result", "{37FF0C
 		Benchmark\Result\result.json = Benchmark\Result\result.json
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "B_ClassLibrary", "Benchmark\B_ClassLibrary\B_ClassLibrary.csproj", "{46829591-EDFE-4DF8-A704-0141CC7F2266}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "B_ClassLibrary", "Benchmark\B_ClassLibrary\B_ClassLibrary.csproj", "{46829591-EDFE-4DF8-A704-0141CC7F2266}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "misc", "misc", "{710EEB1B-C07D-4B1A-A59D-43985F05CFBA}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

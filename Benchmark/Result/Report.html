@@ -63,35 +63,35 @@
         var selDataSource = document.getElementById('selectDataSource');
         var selMethod = document.getElementById('selectMethod');
         function methodChange() {
-            selMethod = selData.data.find(function (item) {
+            selMd = selData.data.find(function (item) {
                 return item.method === selMethod.value;
             });
-            if (selMethod) {
+            if (selMd) {
                 option.yAxis.axisLabel = {
-                    formatter : '{value} ' + selMethod.unit,
+                    formatter : '{value} ' + selMd.unit,
                     align: 'center'
                 };
-                option.xAxis.data = selMethod.reulst.map(function (item) {
+                option.xAxis.data = selMd.reulst.map(function (item) {
                     return item.hostCLR;
                 });
                 option.legend.data = ['Mean', 'Error', 'StdDev', 'Ratio'];
                 option.series[0] = {
                     name: 'Mean',
                     type: 'bar',
-                    data: selMethod.reulst.map(function (item) { return item.median; })
+                    data: selMd.reulst.map(function (item) { return item.median; })
                 };
                 option.series[1] = {
                     name: 'Error',
                     type: 'bar',
-                    data: selMethod.reulst.map(function (item) { return item.error; })
+                    data: selMd.reulst.map(function (item) { return item.error; })
                 }; option.series[2] = {
                     name: 'StdDev',
                     type: 'bar',
-                    data: selMethod.reulst.map(function (item) { return item.stdDev; })
+                    data: selMd.reulst.map(function (item) { return item.stdDev; })
                 }; option.series[3] = {
                     name: 'Ratio',
                     type: 'bar',
-                    data: selMethod.reulst.map(function (item) { return item.ratio; })
+                    data: selMd.reulst.map(function (item) { return item.ratio; })
                 };
                 // 使用刚指定的配置项和数据显示图表。
                 myChart.setOption(option);
@@ -105,6 +105,7 @@
             if (selData) {
                 document.getElementById('lblOs').innerText = selData.os;
                 document.getElementById('lblProcessor').innerText = selData.processor;
+                selMethod.options.length=0;
                 for (var i = 0; i < selData.data.length; i++) {
                     var d = selData.data[i];
                     selMethod.add(new Option(d.method, d.method));
