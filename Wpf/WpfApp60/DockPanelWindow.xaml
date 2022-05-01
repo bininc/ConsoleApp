@@ -1,0 +1,16 @@
+﻿<Window x:Class="WpfApp60.DockPanelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp60"
+        mc:Ignorable="d"
+        Title="DockPanelWindow" Height="300" Width="300">
+    <DockPanel Margin="10" Background="Azure" LastChildFill="True">
+        <Button DockPanel.Dock="Top" Background="Red">Top Button</Button>
+        <Button DockPanel.Dock="Left" Background="Orange">Left Button</Button>
+        <Button DockPanel.Dock="Right" Background="Green">Right Button</Button>
+        <Button DockPanel.Dock="Bottom" Background="Blue" Foreground="White">Bottom Button</Button>
+        <Button>Remaining Button</Button>
+    </DockPanel>
+</Window>

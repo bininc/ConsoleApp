@@ -1,0 +1,16 @@
+﻿<Window x:Class="WpfApp60.CanvasWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp60"
+        mc:Ignorable="d"
+        Title="CanvasWindow" Height="450" Width="550">
+    <Grid>
+        <Canvas x:Name="cv" Margin="10,10,10,10" Background="White" ClipToBounds="False">
+            <CheckBox x:Name="chkClipToBounds" Canvas.Left="10" Canvas.Top="10" Checked="chkClipToBounds_Checked" Unchecked="chkClipToBounds_Unchecked">ClipToBounds</CheckBox>
+            <Rectangle x:Name="rect" Canvas.Left="400" Canvas.Top="100" Fill="Blue" Stroke="Red" Width="200" Height="200"></Rectangle>
+            <Ellipse x:Name="el" Canvas.Left="250" Canvas.Top="150" Fill="Azure" Stroke="Green" Width="180" Height="180"></Ellipse>
+        </Canvas>
+    </Grid>
+</Window>
